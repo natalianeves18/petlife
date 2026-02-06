@@ -6,7 +6,7 @@ export const loginUser = async ({ email, password }) =>
     .then((resp) => {
       api.defaults.headers.common["Authorization"] = resp.data.token;
       localStorage.setItem("token", resp.data.token);
-      window.location.replace("http://localhost:3000");
+      window.location.replace(window.location.origin);
       return resp.data;
     })
     .catch((err) => {
@@ -24,7 +24,7 @@ export const amIAlive = () => {
 export const logoutUser = async (user) => {
   api.defaults.headers.common["Authorization"] = null;
   localStorage.setItem("token", null);
-  return window.location.replace("http://localhost:3000");
+  return window.location.replace(window.location.origin);
 };
 
 export const registerUser = async (user) =>

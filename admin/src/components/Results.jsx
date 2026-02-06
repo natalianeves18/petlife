@@ -20,6 +20,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
 import UploadAndDisplayImage from "./Upload";
+import { API_BASE_URL } from "../api/api";
 
 const EditResult = ({
   users,
@@ -34,7 +35,7 @@ const EditResult = ({
 }) => {
   useEffect(() => {
     console.log(result)
-    setSelectedImage(`http://localhost:8080${result.data}`)
+    setSelectedImage(`${API_BASE_URL}${result.data}`)
   }, [])
   return (
     <div style={{ display: "flex" }}>
@@ -212,7 +213,7 @@ const TableRows = ({ row, setEditing, onDelete, setResult }) => {
           <img
             alt=""
             style={{ maxWidth: 80 }}
-            src={`http://localhost:8080${row.data}`}
+            src={`${API_BASE_URL}${row.data}`}
           />
         )}
       </TableCell>
