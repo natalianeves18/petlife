@@ -11,12 +11,12 @@ Using React native Ts with expo
 - Improve the components styles
 
 ## IMPORTANT
-Use node >= v16.0.0 | <= v17.0.0
+Use node >= v20.19.4
 ## Running
 ### Install the dependences
 `npm install`
 ### Run the project
-`expo start` or `npx expo start`
+`npx expo start`
 
 ### Annotations
 Go to console and type `ipconfig`

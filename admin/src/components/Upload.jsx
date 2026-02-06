@@ -1,4 +1,5 @@
 import { uploadImage } from "../api/user";
+import { API_BASE_URL } from "../api/api";
 
 const UploadAndDisplayImage = ({
   setImageId,
@@ -25,7 +26,9 @@ const UploadAndDisplayImage = ({
             alt="not fount"
             width={"250px"}
             src={
-              !!selectedImage && typeof selectedImage === 'string' && selectedImage.includes("localhost")
+              !!selectedImage &&
+              typeof selectedImage === "string" &&
+              selectedImage.startsWith(API_BASE_URL)
                 ? selectedImage
                 : URL.createObjectURL(selectedImage)
             }

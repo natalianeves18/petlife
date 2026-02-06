@@ -1,6 +1,6 @@
 # Backend MiAwor
 Created this project to do a backend to MiAwor Mobile and Web(admin) <br/>
-Using NodeJs with multer, mysql12, sequelize
+Using NodeJs with multer, mysql, sequelize
 ## Goals
 - Learn how to receive an image, save and send it to frontend
 - Learn how to use Sequelize to manipulate the DB(database)
