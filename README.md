@@ -35,6 +35,21 @@ O app mobile oferece acesso às informações para os responsáveis:
 - `backend/` (Node.js + Express + Sequelize)
 - `frontend/` (Mobile - React Native + Expo)
 
+## Variáveis de ambiente
+
+Para segurança e configuração por ambiente, use arquivos `.env` (não são versionados).
+
+1. `backend/.env`
+   - Copie `backend/.env.example` para `backend/.env`.
+   - Ajuste as credenciais do banco e `PORT` conforme necessário.
+2. `admin/.env`
+   - Copie `admin/.env.example` para `admin/.env` (ou `.env.local`).
+   - Ajuste `REACT_APP_API_URL` para o endereço do backend.
+3. `frontend/.env`
+   - Copie `frontend/.env.example` para `frontend/.env`.
+   - Ajuste `EXPO_PUBLIC_API_URL` para o endereço do backend.
+   - Em dispositivos físicos, use o IP da sua máquina (ex: `http://192.168.0.10:8080`).
+
 ## Scripts principais (raiz)
 
 Depois de instalar as dependências em cada app, você pode usar:
